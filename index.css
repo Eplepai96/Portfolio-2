@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Lato&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+section {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+:root {
+    --header-font: 'Josefin Sans', sans-serif;
+    --paragraph-font: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: var(--paragraph-font);
+}
+
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow-x: auto;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-image-container {
+    width: 50vmin;
+    height: 50vmin;
+    background-image: url("/images/IMG_2174.JPG");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.profile-text-container {
+    text-align: center;
+}
+
+.scroll-container {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+    align-items: center;
+}
+
+.scroll-container div {
+    max-width: 400px;
+    max-height: 400px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 1px 3px 8px rgb(197, 197, 197);
+}
+
+.scroll-container img,
+.scroll-container h3,
+.scroll-container p,
+.scroll-container a {
+    max-width: 400px;
+}
+
+.scroll-container h3,
+.scroll-container p,
+.scroll-container a {
+    margin-left: 5px;
+}
+
+
+.arrow-down-container {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.arrow-down {
+    font-size: 50px;
+    cursor: pointer;
+    scale: 1.3;
+    animation-name: arrow-down-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+} 
+
+.arrow-down:hover {
+    animation-name: arrow-down-hover;
+    transition: ease-out .2s;
+
+}
+
+@keyframes arrow-down-animation {
+    0% {scale: 1;}
+    25% {scale: 1.3;}
+    50% {scale: 1;}
+    75% {scale: 1.3;}
+    100% {scale: 1;}
+}
+
+@keyframes arrow-down-hover {
+    100% {scale: 1.5; font-weight: bold;}
+}
+
+.left-arrow, .right-arrow {
+    scale: 1.3;
+    cursor: pointer;
+
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    scale: 1.6;
+}
+
+.cards-container {
+    max-width: 250px;
+    display: flex;
+    overflow: hidden;
+}
+
+.projects-header, .contact-container {
+    margin-left: 43px;
+}
